@@ -1,0 +1,899 @@
+/* ---------- Common Style ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+:root {
+    --color: #174D4D;
+    --light-color: #f4f4f4;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.heading {
+    margin: 2rem;
+    padding-top: 6rem;
+    display: inline-block;
+    font-size: 3.5rem;
+    color: var(--color);
+    position: relative;
+    letter-spacing: .2rem;
+}
+
+.heading::before,
+.heading::after {
+    content: '';
+    position: absolute;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-top: .4rem solid var(--color);
+    border-left: .4rem solid var(--color);
+}
+
+.heading::before {
+    top: 5.8rem;
+    left: -2rem;
+}
+
+.heading::after {
+    bottom: -.5rem;
+    right: -2rem;
+    transform: rotate(180deg);
+}
+
+.btn {
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    background: var(--color);
+    color: #fff;
+    cursor: pointer;
+    height: 3.5rem;
+    width: 15rem;
+    font-size: 1.7rem;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .3);
+}
+
+.btn:hover {
+    letter-spacing: .1rem;
+    opacity: .8;
+}
+
+/* ---------- index.html page End ---------- */
+/* ---------- Header Section Starts ---------- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.header .navbar ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header .navbar ul li {
+    margin: 0 1.5rem;
+}
+
+.header .navbar ul li a {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.header .navbar ul li a:hover {
+    color: #ccc;
+}
+
+.header .fa-bars {
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    display: none;
+}
+
+/* ---------- Header Section Ends ---------- */
+
+/* ---------- Home Section Starts ---------- */
+.home {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(#03363D, var(--color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden !important;
+}
+
+.home .banner {
+    color: #fff;
+    font-size: 5rem;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3);
+}
+
+.home .slogan {
+    color: #eee;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.home button {
+    height: 4rem;
+    width: 18rem;
+    background: #fff;
+    color: #444;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+}
+
+.home button:hover {
+    letter-spacing: .1rem;
+}
+
+.home .wave {
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    height: 11rem;
+    width: 100%;
+    background: url(img/wave.png);
+    background-size: 100rem 11rem;
+    background-repeat: repeat-x;
+    animation: waves 10s linear infinite;
+}
+
+.home .wave2 {
+    animation-direction: reverse;
+    opacity: .2;
+}
+
+.home .wave3 {
+    animation-duration: 4s;
+    opacity: .5;
+}
+
+@keyframes waves {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 100rem;
+    }
+}
+
+.home .fa-cog {
+    position: absolute;
+    font-size: 30rem;
+    opacity: .15;
+    color: #fff;
+    animation: rotates 10s linear infinite;
+}
+
+.home .nut1 {
+    top: 10%;
+    left: -15rem;
+}
+
+.home .nut2 {
+    bottom: 23%;
+    right: -13rem;
+    animation-direction: reverse;
+}
+
+@keyframes rotates {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+/* ---------- Home Section Ends ---------- */
+
+/* ---------- About Section Starts ---------- */
+.about {
+    min-height: 100vh;
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 4rem;
+}
+
+.about .row .content {
+    text-align: left;
+}
+
+.about .row .image img {
+    width: 50vw;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: var(--color);
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0;
+}
+
+.about::before,
+.about::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    opacity: .5;
+    border-radius: 50%;
+}
+
+.about::before {
+    height: 50rem;
+    width: 50rem;
+    background: #ccc;
+    bottom: -10rem;
+    left: -10rem;
+}
+
+.about::after {
+    height: 60rem;
+    width: 60rem;
+    background: var(--color);
+    top: -10rem;
+    right: -10rem;
+}
+
+/* ---------- About Section Ends ---------- */
+
+/* ---------- Course Section Starts ---------- */
+.course {
+    padding: 10px;
+    width: 100vw;
+    text-align: center;
+}
+
+.course .row {
+    margin: 2rem;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course .row .image img {
+    width: 50vw;
+    height: 50vw;
+}
+
+.course .row .content {
+    text-align: justify;
+    padding: 0.3rem;
+}
+
+.course .row .content h3 {
+    font-size: 3rem;
+    color: var(--color);
+}
+
+.course .row .content p {
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0;
+}
+
+/* ---------- Course Section Ends ---------- */
+
+/* ---------- Team Section Starts ---------- */
+.team {
+    min-height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background-color: #222;
+}
+
+.team .heading {
+    color: #fff;
+}
+
+.team .heading::before,
+.team .heading::after {
+    border-color: #fff;
+}
+
+.team .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team .row .card {
+    height: 35rem;
+    width: 25rem;
+    background: #fff;
+    text-align: center;
+    border-radius: 20px;
+    margin: 7rem 2rem;
+    position: relative;
+    overflow: hidden;
+    -webkit-box-reflect: below .2rem linear-gradient(transparent 70%, #0004);
+}
+
+.team .row .card:hover {
+    transform: scale(1.1);
+}
+
+.team .row .card .image {
+    margin: 1rem 0;
+    padding-top: 4rem;
+}
+
+.team .row .card .image img {
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    border: 1rem solid #fff;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    clip-path: circle();
+}
+
+.team .row .card .info h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.team .row .card .info span {
+    font-size: 1.8rem;
+    color: var(--color);
+}
+
+.team .row .card .info .icons a {
+    margin-top: 4rem;
+    padding: 0 1rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.team .row .card::before,
+.team .row .card::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    height: 15rem;
+    width: 15rem;
+    z-index: -1;
+}
+
+.team .row .card::before {
+    background: var(--color);
+    top: -3rem;
+    right: -4rem;
+}
+
+.team .row .card::after {
+    background: #ccc;
+    bottom: -3rem;
+    left: -4rem;
+}
+
+/* ---------- Team Section Ends ---------- */
+
+/* ---------- Contact Section Starts ---------- */
+.contact {
+    min-height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .row .image img {
+    height: 50vw;
+    width: 50vw;
+}
+
+.contact .row .form-container {
+    width: 50%;
+    text-align: left;
+    padding: 0 5rem;
+}
+
+.contact .row .form-container input,
+textarea {
+    outline: none;
+    border: none;
+    height: 4rem;
+    background: none;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, 0.3);
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+}
+
+.contact .row .form-container .inputBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .row .form-container .inputBox input[type="text"] {
+    width: 49%;
+}
+
+.contact .row .form-container input[type="email"] {
+    width: 100%;
+    text-transform: lowercase;
+}
+
+.contact .row .form-container textarea {
+    width: 100%;
+    height: 20rem;
+    padding: 1rem;
+    resize: none;
+}
+
+.contact .row .form-container input[type="submit"] {
+    background-color: var(--color);
+    color: #fff;
+    cursor: pointer;
+    height: 4rem;
+    width: 10rem;
+}
+
+.contact .row .form-container input[type="submit"]:hover {
+    opacity: .8;
+    letter-spacing: .1rem;
+}
+
+/* ---------- Contact Section Ends ---------- */
+
+/* ---------- FAQ Section Starts ---------- */
+.faq {
+    min-height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.faq .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+.faq .row .image img {
+    height: 50vw;
+    width: 50vw;
+}
+
+.faq .row .accordion-container {
+    width: 50%;
+    text-align: left;
+}
+
+.faq .row .accordion-container .accordion .accordion-header {
+    /* display: flex; */
+    background-color: var(--color);
+    margin: 1rem 0;
+    box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.faq .row .accordion-container .accordion .accordion-header span {
+    display: inline-block;
+    text-align: center;
+    height: 4rem;
+    width: 5rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    background: #fff;
+    color: #333;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.faq .row .accordion-container .accordion .accordion-header h3 {
+    display: inline;
+    color: #fff;
+    font-weight: 400;
+    padding-left: .5rem;
+    font-size: 1.5rem;
+}
+
+.faq .row .accordion-container .accordion .accordion-body {
+    padding: 1rem;
+    color: #444;
+    box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .3);
+    font-size: 1.3rem;
+    display: none;
+}
+
+.faq .row .accordion-container .accordion:nth-child(1) .accordion-body {
+    display: block;
+}
+
+/* ---------- FAQ Section Starts ---------- */
+
+/* ---------- Footer Section Starts ---------- */
+.footer {
+    padding-top: 3rem;
+    background: var(--color);
+    background-size: cover;
+    background-position: center;
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .boxx {
+    flex: 1 1 25rem;
+    margin: 2rem;
+}
+
+.footer .box-container .boxx h3 {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+.footer .box-container .boxx p {
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    color: #eee;
+}
+
+.footer .box-container .boxx i {
+    margin: .5rem 0;
+    margin-right: 1rem;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.5rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+}
+
+.footer .box-container .boxx a {
+    display: block;
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    color: #eee;
+}
+
+.footer .box-container .boxx a:hover {
+    text-decoration: underline;
+}
+
+.footer .box-container .boxx .info {
+    display: flex;
+    align-items: center;
+}
+
+.footer .box-container .boxx .info i {
+    margin: .5rem 0;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--color);
+    font-size: 1.5rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+}
+
+.footer .box-container .boxx .info .emailadd {
+    text-transform: lowercase;
+}
+
+.footer .credit {
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: .1rem;
+    color: #fff;
+    border-top: .1rem solid #fff5;
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+/* ---------- Footer Section Ends ---------- */
+
+/* ---------- media queries ---------- */
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header .fa-bars {
+        display: block;
+    }
+
+    .header .navbar {
+        position: fixed;
+        top: -120%;
+        left: 0;
+        height: auto;
+        width: 100%;
+        background-color: #fff;
+        z-index: 1000;
+        border-top: .1rem solid rgba(0, 0, 0, .3);
+    }
+
+    .header .navbar ul {
+        height: 100%;
+        width: 100%;
+        flex-flow: column;
+    }
+
+    .header .navbar ul li a {
+        color: #444;
+        font-size: 2.4rem;
+    }
+
+    .header .fa-times {
+        transform: rotate(180deg);
+    }
+
+    .header .nav-toggle {
+        top: 5.8rem;
+    }
+
+    .home .banner {
+        font-size: 4rem;
+    }
+
+    .home .slogan {
+        font-size: 1.7rem;
+    }
+
+    .about .row {
+        flex-flow: column-reverse;
+        padding: 0 2rem;
+    }
+
+    .about .row .image img {
+        width: 100vw;
+    }
+
+    .course .row {
+        flex-flow: column-reverse;
+    }
+
+    .course .row:nth-child(even) {
+        flex-flow: column;
+    }
+
+    .course .row .image img {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .course .row .content {
+        padding: 0;
+    }
+
+    .contact .row {
+        flex-flow: column-reverse;
+    }
+
+    .contact .row .image img {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .contact .row .form-container {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    .faq {
+        padding: 0;
+    }
+
+    .faq .row {
+        padding: 0 1rem;
+        flex-flow: column;
+    }
+
+    .faq .row .image img {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .faq .row .accordion-container {
+        width: 100%;
+    }
+}
+
+@media (max-width:550px) {
+    .footer {
+        flex-flow: column;
+    }
+
+    .footer h1 {
+        text-align: center;
+    }
+
+    .footer .icons {
+        padding: 2rem 0;
+    }
+}
+
+/* ---------- index.html page End ---------- */
+
+/* ---------- About Us Page Starts ---------- */
+.about-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container .card {
+    position: relative;
+    width: 900px;
+    height: auto;
+    background: #f8f9f9;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.about-container .card .content {
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+}
+
+/* ---------- About Us Page End ---------- */
+
+/*  ---------- Computer Technology Page CSS ---------- 
+    ---------- Course Section ----------
+    ---------- Card Layout ----------   */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background: #f8f9f9;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
+
+/* .container:hover .card {
+    filter: blur(20px);
+    transform: scale(0.9);
+    opacity: 0.5;
+} */
+.container .card:hover {
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.container .card .circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #174D4D;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+}
+
+.container .card .circle h2 {
+    color: #fff;
+    font-size: 3rem;
+    padding: 30px 0;
+}
+
+.container .card .content {
+    position: absolute;
+    bottom: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.container .card .content p {
+    color: #444;
+    font-size: 1.5rem;
+}
+
+.container .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #174D4D;
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.container .card:nth-child(even) .circle,
+.container .card:nth-child(even) .content a {
+    background: var(--color);
+}
+
+.container .card:nth-child(odd) .circle,
+.container .card:nth-child(odd) .content a {
+    background: #03363D;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-flow: column;
+        width: auto;
+        height: auto;
+    }
+}
+/* ---------- Computer Technology Page End ---------- */
